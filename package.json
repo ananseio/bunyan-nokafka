@@ -1,6 +1,6 @@
 {
   "name": "bunyan-nokafka",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bunyan Kafka Stream for Kafka 0.9",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha",
