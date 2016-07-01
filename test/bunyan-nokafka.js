@@ -22,13 +22,13 @@ const Kafka = require('no-kafka');
 
 const KafkaStream = require('../bunyan-nokafka');
 
-const logTopic = 'local-logs';
+const logTopic = 'bunyan-nokafka';
 const kafkaOpts = {
   connectionString: '127.0.0.1:9092',
 };
 
 const logger = bunyan.createLogger({
-  name: 'cached-rethinkdb-test',
+  name: 'bunyan-nokafka-test',
   streams: [
     {
       level: 'info',
@@ -53,7 +53,7 @@ describe('Kafka Bunyan Stream', () => {
   it('should be fail to construct without Kafka Options', () => {
     try {
       const kafkaStream = new KafkaStream({
-        topic: 'local-logs',
+        topic: logTopic,
       });
       expect(kafkaStream).to.exist;
     } catch (err) {
