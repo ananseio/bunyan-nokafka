@@ -1,3 +1,7 @@
+[![Code Climate](https://codeclimate.com/github/ananse-io/bunyan-nokafka/badges/gpa.svg)](https://codeclimate.com/github/ananse-io/bunyan-nokafka)
+[![Test Coverage](https://codeclimate.com/github/ananse-io/bunyan-nokafka/badges/coverage.svg)](https://codeclimate.com/github/ananse-io/bunyan-nokafka/coverage)
+[![license][badge-license]][license]
+
 # Bunyan Kafka Stream Plugin
 **bunyan-nokafka** is [bunyan](https://github.com/trentm/node-bunyan) stream for [Kafka](http://kafka.apache.org/) with [no-kafka](https://www.npmjs.com/package/no-kafka) library.
 
