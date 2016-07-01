@@ -1,0 +1,36 @@
+{
+  "name": "bunyan-nokafka",
+  "version": "0.0.0",
+  "description": "Bunyan Kafka Stream for Kafka 0.9",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha"
+  },
+  "author": "Beda Tse <bedatse@ananse.io>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ananse-io/bunyan-nokafka.git"
+  },
+  "devDependencies": {
+    "bunyan": "^1.8.1",
+    "chai": "^3.5.0",
+    "esformatter": "^0.9.5",
+    "esformatter-add-trailing-commas": "^1.1.0",
+    "esformatter-curly": "0.0.1",
+    "esformatter-eol-last": "^1.0.0",
+    "esformatter-quotes": "^1.1.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-bdd": "^2.1.0",
+    "eslint-plugin-import": "^1.9.2",
+    "eslint-plugin-jsx-a11y": "^1.5.3",
+    "eslint-plugin-mocha": "^3.0.0",
+    "eslint-plugin-react": "^5.2.2",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "no-kafka": "^2.5.5"
+  },
+  "main": "./bunyan-nokafka.js"
+}

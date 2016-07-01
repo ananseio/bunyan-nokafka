@@ -1,0 +1,26 @@
+{
+  "preset": "default",
+  "plugins": [
+    "esformatter-quotes",
+    "esformatter-curly",
+    "esformatter-add-trailing-commas"
+  ],
+  "quotes": {
+    "type": "single"
+  },
+  "whiteSpace": {
+    "before": {
+      "BlockComment": 1,
+      "LineComment": 1
+    },
+    "after": {
+      "BlockComment": 0,
+      "LineComment": 0
+    }
+  },
+  "lineBreak": {
+    "before": {
+      "EndOfFile": 2
+    }
+  }
+}
