@@ -9,7 +9,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ananse-io/bunyan-nokafka.git"
+    "url": "git@github.com:ananseio/bunyan-nokafka.git"
   },
   "devDependencies": {
     "bunyan": "^1.8.1",
