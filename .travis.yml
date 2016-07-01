@@ -4,9 +4,10 @@ node_js:
 
 env:
   - CXX=g++-4.8
-  - CODECLIMATE_REPO_TOKEN=1ebfda221373077622c94fc4d90e02fe4bf9ddd17904950c0ead8cdbb74e14ef
 
 addons:
+  code_climate:
+    repo_token: 1ebfda221373077622c94fc4d90e02fe4bf9ddd17904950c0ead8cdbb74e14ef
   apt:
     sources:
       - ubuntu-toolchain-r-test
@@ -23,5 +24,5 @@ before_install:
   - kafka/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --create --topic bunyan-nokafka --partitions 1 --replication-factor 1
 
 after_script:
-  - npm install codeclimate-test-reporter
-  - codeclimate-test-reporter < coverage/lcov.info
+  - npm install -g codeclimate-test-reporter
+  - CODECLIMATE_REPO_TOKEN=1ebfda221373077622c94fc4d90e02fe4bf9ddd17904950c0ead8cdbb74e14ef codeclimate-test-reporter < coverage/lcov.info
