@@ -1,5 +1,5 @@
 # Bunyan Kafka Stream Plugin
-**bunyan-nokafka** is Bunyan stream for Kafka with [no-kafka](https://www.npmjs.com/package/no-kafka) library.
+**bunyan-nokafka** is [bunyan](https://github.com/trentm/node-bunyan) stream for [Kafka](http://kafka.apache.org/) with [no-kafka](https://www.npmjs.com/package/no-kafka) library.
 
 ## Usage
 ```
@@ -29,6 +29,6 @@ kafkaStream.on('ready', () => {
 Please refer to [no-kafka producer options](https://www.npmjs.com/package/no-kafka#producer-options)
 
 ## Author
-Ananse IO <opensource@ananse.io>
+Ananse Limited <opensource@ananse.io>
 
 ## License: Apache 2.0
