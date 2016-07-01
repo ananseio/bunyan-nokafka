@@ -4,10 +4,9 @@ node_js:
 
 env:
   - CXX=g++-4.8
+  - CODECLIMATE_REPO_TOKEN=1ebfda221373077622c94fc4d90e02fe4bf9ddd17904950c0ead8cdbb74e14ef
 
 addons:
-  code-climate:
-    repo_token: 1ebfda221373077622c94fc4d90e02fe4bf9ddd17904950c0ead8cdbb74e14ef
   apt:
     sources:
       - ubuntu-toolchain-r-test
