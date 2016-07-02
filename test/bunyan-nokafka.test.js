@@ -137,7 +137,6 @@ describe('Kafka Bunyan Stream', () => {
           expect(err).to.be.an.instanceOf(Error);
           expect(err).to.have.deep.property('message', 'Missing or wrong partition field');
           kafkaStream.removeAllListeners('error').removeAllListeners('ready');
-          logger.removeStream
           return kafkaConsumer.unsubscribe(logTopic, [0, 1, 2, 3])
             .then(() => kafkaConsumer.end())
             .then(() => done());
