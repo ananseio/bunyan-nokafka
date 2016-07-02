@@ -32,6 +32,10 @@ class KafkaStream extends EventEmitter {
       throw new Error('Kafka options must be provided');
     }
 
+    if (!kafkaOpts.partitioner || typeof kafkaOpts.partitioner !== 'function' ) {
+      throw new Error('Kafka options must have a partitioner function');
+    }
+
     if (!topic) {
       throw new Error('KafkaStream must have a topic');
     }
@@ -45,10 +49,21 @@ class KafkaStream extends EventEmitter {
     });
   }
 
+  static roundRobinPartitioner() {
+    let rrIndex = 0;
+    return (topic, partitions) => {
+      const curIndex = rrIndex;
+      rrIndex++;
+      if (rrIndex >= partitions.length) {
+        rrIndex = 0;
+      }
+      return curIndex;
+    };
+  }
+
   write(record) {
     this.producer.send({
       topic: this.topic,
-      partition: 0,
       message: {
         value: record,
       },
