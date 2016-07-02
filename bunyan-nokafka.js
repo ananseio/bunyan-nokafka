@@ -32,7 +32,7 @@ class KafkaStream extends EventEmitter {
       throw new Error('Kafka options must be provided');
     }
 
-    if (!kafkaOpts.partitioner || typeof kafkaOpts.partitioner !== 'function' ) {
+    if (!kafkaOpts.partitioner || typeof kafkaOpts.partitioner !== 'function') {
       throw new Error('Kafka options must have a partitioner function');
     }
 
