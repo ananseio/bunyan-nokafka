@@ -21,7 +21,7 @@ before_install:
   - sleep 10
   - nohup bash -c "cd kafka && bin/kafka-server-start.sh config/server.properties &"
   - sleep 10
-  - kafka/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --create --topic bunyan-nokafka --partitions 1 --replication-factor 1
+  - kafka/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --create --topic bunyan-nokafka --partitions 4 --replication-factor 1
 
 after_script:
   - npm install -g codeclimate-test-reporter
