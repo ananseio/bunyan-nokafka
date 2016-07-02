@@ -1,6 +1,6 @@
-[![Build](https://travis-ci.org/ananseio/bunyan-nokafka.svg)](https://travis-ci.org/ananse-io/bunyan-nokafka)
-[![Code Climate](https://codeclimate.com/github/ananseio/bunyan-nokafka/badges/gpa.svg)](https://codeclimate.com/github/ananse-io/bunyan-nokafka)
-[![Test Coverage](https://codeclimate.com/github/ananseio/bunyan-nokafka/badges/coverage.svg)](https://codeclimate.com/github/ananse-io/bunyan-nokafka/coverage)
+[![Build](https://travis-ci.org/ananseio/bunyan-nokafka.svg)](https://travis-ci.org/ananseio/bunyan-nokafka)
+[![Code Climate](https://codeclimate.com/github/ananseio/bunyan-nokafka/badges/gpa.svg)](https://codeclimate.com/github/ananseio/bunyan-nokafka)
+[![Test Coverage](https://codeclimate.com/github/ananseio/bunyan-nokafka/badges/coverage.svg)](https://codeclimate.com/github/ananseio/bunyan-nokafka/coverage)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 # Bunyan Kafka Stream Plugin
@@ -19,6 +19,7 @@ const kafkaStream = new KafkaStream({
   topic: 'log-topic',
   kafkaOpts: {
     connectionString: '127.0.0.1:9092',
+    partitioner: KafkaStream.roundRobinPartitioner(),
   },
 });
 
